@@ -58,7 +58,7 @@
                                     } else {
 
                                         if(!preg_match("/^[0-9.-]*$/", $tgl_surat)){
-                                            $_SESSION['etgl_surat'] = 'Form Tanggal Surat hanya boleh mengandung angka dan minus(-)';
+                                            $_SESSION['etgl_surat'] = 'Form Tanggal Notulensi hanya boleh mengandung angka dan minus(-)';
                                             echo '<script language="javascript">window.history.back();</script>';
                                         } else {
 
@@ -249,7 +249,7 @@
                             <label for="kode">Kode Klasifikasi</label>
                         </div>
                         <div class="input-field col s6">
-                            <i class="material-icons prefix md-prefix">place</i>
+                            <i class="material-icons prefix md-prefix">groups</i>
                             <input id="asal_surat" type="text" class="validate" name="asal_surat" value="<?php echo $asal_surat ;?>" required>
                                 <?php
                                     if(isset($_SESSION['easal_surat'])){
@@ -294,7 +294,7 @@
                                         unset($_SESSION['etgl_surat']);
                                     }
                                 ?>
-                            <label for="tgl_surat">Tanggal Surat</label>
+                            <label for="tgl_surat">Tanggal Notulensi</label>
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix md-prefix">description</i>
