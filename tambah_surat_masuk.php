@@ -70,10 +70,10 @@
                                                 $cek = mysqli_query($config, "SELECT * FROM tbl_surat_masuk WHERE no_surat='$no_surat'");
                                                 $result = mysqli_num_rows($cek);
 
-                                                if($result > 0){
-                                                    $_SESSION['errDup'] = 'Nomor Surat sudah terpakai, gunakan yang lain!';
-                                                    echo '<script language="javascript">window.history.back();</script>';
-                                                } else {
+                                                // if($result > 0){
+                                                //     $_SESSION['errDup'] = 'Nomor Surat sudah terpakai, gunakan yang lain!';
+                                                //     echo '<script language="javascript">window.history.back();</script>';
+                                                // } else {
 
                                                     $ekstensi = array('jpg','png','jpeg','doc','docx','pdf');
                                                     $file = $_FILES['file']['name'];
@@ -133,7 +133,7 @@
                                                             echo '<script language="javascript">window.history.back();</script>';
                                                         }
                                                     }
-                                                }
+                                                // }
                                             }
                                         }
                                     }
@@ -277,7 +277,7 @@
                                         unset($_SESSION['errDup']);
                                     }
                                 ?>
-                            <label for="no_surat">Nomor Surat</label>
+                            <label for="no_surat">Jenis Kegiatan</label>
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix md-prefix">date_range</i>
